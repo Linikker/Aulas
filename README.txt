@@ -1,1 +1,0 @@
-Este repositorio contem conteudos sobre as minhas aulas e exercicios.
