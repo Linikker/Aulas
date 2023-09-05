@@ -4,7 +4,7 @@ print('Aula 4 - Introd. Programação Estruturada')
 res = ('Operador invalido')
 nome = input('Digite seu Nome: ')
 num1 = float(input('Digite um número: '))
-op = input('Digite um operador ( + ; - ; / ; * ): ')
+op = input('Digite um operador ( +  -  /  * ): ')
 num2 = float(input('Digite outro número: '))
 
 
@@ -27,11 +27,14 @@ elif (op == '*'):
 	print(f'Nome: {nome} \n Equação: {num1} {op} {num2} = {res:.2f}')
 	
 elif (op == '/' or '%'):
-	res = num1 / num2
-	os.system('CLS')
-	print('Aula 4 - Introd. Programação Estruturada')
-	print(f'Nome: {nome} \n Equação: {num1} {op} {num2} = {res:.2f}')
-	
+	if(num1 or num2 == 0):
+		print('Numero 0 não é divisivel...')
+	else:
+		res = num1 * num2
+		os.system('CLS')
+		print('Aula 4 - Introd. Programação Estruturada')
+		print(f'Nome: {nome} \n Equação: {num1} {op} {num2} = {res:.2f}')
+
 else:
 	print(f'Pelo amor {nome}, Insira um operador valido.')
 
@@ -50,7 +53,7 @@ print(f'Nome: {nome}\n 1° Numero: {num1}\n Operador: {op}\n 2° Numero: {num2}\
 ---
 
 if (Logica):
-	codigo p/ verdaede
+	codigo p/ verdade
 
 ---
 
