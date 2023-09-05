@@ -1,6 +1,7 @@
 import os
 
 print('Aula 4 - Introd. Programação Estruturada')
+
 res = ('Operador invalido')
 nome = input('Digite seu Nome: ')
 num1 = float(input('Digite um número: '))
@@ -12,19 +13,19 @@ if (op == '+'):
 	res = num1 + num2
 	os.system('CLS')
 	print('Aula 4 - Introd. Programação Estruturada')
-	print(f'Nome: {nome} \n Equação: {num1:.0f} {op} {num2:.0f} = {res:.0f}')
+	print(f'Nome: {nome} \n Equação: {num1:.0f} {op} {num2:.0f} = {res:.0f}.')
 	
 elif (op == '-'):
 	res = num1 - num2
 	os.system('CLS')
 	print('Aula 4 - Introd. Programação Estruturada')
-	print(f'Nome: {nome} \n Equação: {num1:.0f} {op} {num2:.0f} = {res:.0f}')
+	print(f'Nome: {nome} \n Equação: {num1:.0f} {op} {num2:.0f} = {res:.0f}.')
 	
 elif (op == '*'):
 	res = num1 * num2
 	os.system('CLS')
 	print('Aula 4 - Introd. Programação Estruturada')
-	print(f'Nome: {nome} \n Equação: {num1} {op} {num2} = {res:.2f}')
+	print(f'Nome: {nome} \n Equação: {num1} {op} {num2} = {res:.2f}.')
 	
 elif (op == '/' or '%'):
 	if(num1 or num2 == 0):
@@ -33,7 +34,7 @@ elif (op == '/' or '%'):
 		res = num1 * num2
 		os.system('CLS')
 		print('Aula 4 - Introd. Programação Estruturada')
-		print(f'Nome: {nome} \n Equação: {num1} {op} {num2} = {res:.2f}')
+		print(f'Nome: {nome} \n Equação: {num1} {op} {num2} = {res:.2f}.')
 
 else:
 	print(f'Pelo amor {nome}, Insira um operador valido.')
