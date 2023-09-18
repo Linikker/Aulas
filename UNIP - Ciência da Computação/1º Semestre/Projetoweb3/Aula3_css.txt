@@ -1,0 +1,35 @@
+Aula de css
+
+Pseudo seletores(pseudo-classes):
+
+Sintaxe:
+seletor:pseudo-classe {
+    propiedade: valor;
+}
+
+a:visited {
+    background-color: #900
+}
+
+/// EXEMPLO ///
+
+a:hover{
+    background: Yellow
+}
+
+
+--------------------------------------
+
+.class {
+    propiedade:valor
+}
+
+#id: {
+    propiedade:valor
+}
+
+--------------------------------------
+
+Propiedade box-model:
+
+seletor * aplicada a todos os elementos, exceto os pseudo-elementos.

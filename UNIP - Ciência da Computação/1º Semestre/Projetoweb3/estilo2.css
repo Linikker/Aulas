@@ -1,0 +1,16 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+header {
+    background-color: aqua;
+    border: solid 3px;
+    width: 50%;
+}
+
+nav {
+    background-color: yellow;
+    border: solid 3px;
+    width: 50%;
+}

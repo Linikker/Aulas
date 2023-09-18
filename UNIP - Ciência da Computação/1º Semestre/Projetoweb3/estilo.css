@@ -1,0 +1,15 @@
+a {
+    background-color: red;
+}
+
+a:hover {
+    background-color: yellow;
+}
+
+.link:hover {
+    background-color: aqua;
+}
+
+#id1:hover{
+    background-color: aqua;
+}

@@ -1,0 +1,126 @@
+
+
+#menu, #menu ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#menu::before, #menu::after{
+    content: "";
+    display: table;
+}
+
+#menu::after{
+    clear: both;
+}
+
+#menu{
+    width: 95vw;
+    margin: 60px auto;
+    background-color: #111;
+    border: 1px solid #222;
+    border-radius: 15px;
+    box-shadow: 0 1px 1px #777;
+    zoom: 1;
+
+}
+
+
+
+
+#menu li{
+    float: left;
+    padding: 5px 10px;
+    border-right: 1px solid #222;
+    box-shadow: 1px 0 0 #444;
+    position: relative;
+}
+
+
+#menu a{
+    float: left;
+    padding:  12px 30px;
+    color: #999;
+    text-transform: uppercase;
+    font: bold 12px Arial, Helvetica;text-decoration: none;
+    text-shadow: -1px 0 #000;
+}
+
+
+#menu li:hover > a{
+    color: #fafafa;
+}
+
+#menu li:hover {
+    color: #fafafa;
+    background-color: rgb(255, 9, 103);
+    
+}
+
+#menu ul{
+    margin:  20px 0 0 0;
+    visibility: hidden;
+    position: absolute;
+    top: 49px;
+    left: 0;
+    background-color: #444;
+    background-image: linear-gradient(#444, #111);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 3, green, blue, alpha);
+    border-radius: 0 0 10px 10px;
+    
+    
+}
+
+#menu li:hover > ul{
+    visibility: visible;
+    margin: 0;
+    transition: all .2s ease-in-out ;
+
+}
+
+#menu ul ul{
+    top: 0;
+    left: 150px;
+    margin: 0 0 0 20px;
+    box-shadow: -1px 0 0 rgba(255, 255, 255, 3, green, blue, alpha);
+}
+
+#menu ul li{
+    float: none;
+    display: block;
+    border-right: 0px;
+    box-shadow: 1px 0 0 #444, 0 2px 0 #222 ;
+}
+
+#menu ul li:last-child{
+    box-shadow: none;
+}
+
+#menu ul a{
+    padding: 10px;
+    width: 150px;
+    display: block;
+    white-space: normal;
+    float: none;
+    text-transform: none;
+}
+
+#menu ul a:hover {
+    background-color: #0186ba;
+    background-image: linear-gradient(#04acec,#0186ba);
+    border-radius: 10px;
+}
+
+#menu ul li:first-child {
+    border-radius: 0;
+}
+
+#menu ul li:last-child {
+    border-radius: 0 0 10px 10px;
+}
+
+#menu li:first-child {
+    border-radius: 15px 0 0 15px;
+}
+
