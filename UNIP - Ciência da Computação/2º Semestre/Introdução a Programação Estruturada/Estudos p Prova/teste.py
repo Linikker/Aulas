@@ -37,5 +37,5 @@ elif (res.upper() != 'A' or 'B' or 'C'):
     }
 
 input('Gostou do teste? ')
-print('Foda-se hehe.')
+print('Legal.')
 input('')
