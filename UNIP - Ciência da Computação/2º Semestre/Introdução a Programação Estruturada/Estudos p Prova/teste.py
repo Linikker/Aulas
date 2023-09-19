@@ -13,6 +13,7 @@ print(f'Ola {nome}, vamos fazer um teste de matematica...\nA primeira pergunta �
 
 print(f'Opção A: {idade+3}\nOpção B: {idade+4}\nOpção C: {idade+5}')
 res = input(f'Digite uma das alternativas como resposta("A B ou C"): ')
+res.upper()
 
 res.upper() 
 
@@ -37,5 +38,5 @@ elif (res != 'A' or 'B' or 'C'):
     }
 
 input('Gostou do teste? ')
-print('Foda-se hehe.')
+print('Legal.')
 input('')
