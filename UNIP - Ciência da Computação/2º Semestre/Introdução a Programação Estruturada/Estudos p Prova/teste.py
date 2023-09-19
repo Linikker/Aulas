@@ -15,8 +15,6 @@ print(f'Opção A: {idade+3}\nOpção B: {idade+4}\nOpção C: {idade+5}')
 res = input(f'Digite uma das alternativas como resposta("A B ou C"): ')
 res.upper()
 
-res.upper() 
-
 if (res == 'A'):
     {
         print(f'Resposta incorreta... A sua idade daqui 4 anos seria {idade+4} pois {idade} + 4 = {idade+4}.')
