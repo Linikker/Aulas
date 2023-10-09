@@ -2,8 +2,6 @@ import os
 
 print('x --- Espaço Tempo --- x\n')
 
-retorno = 0
-
 def velocidade(espaco,tempo):
 	v = int(espaco/tempo)
 	print(f'O valor do espaço tempo é: {v}.')
@@ -27,8 +25,5 @@ def menu():
 			os.system('cls')
 			print(f'x --- Espaço Tempo --- x')
 			print(f'x --- Retorno Nº {retorno}--- x\n')
-		
-		
-
 
 menu()
