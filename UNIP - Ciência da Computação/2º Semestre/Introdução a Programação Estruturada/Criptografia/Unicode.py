@@ -2,8 +2,6 @@ import os
 
 menu = None
 
-
-
 while (menu!='0'):
 	os.system('cls')
 	print('X --- Valor Unicode --- X')
