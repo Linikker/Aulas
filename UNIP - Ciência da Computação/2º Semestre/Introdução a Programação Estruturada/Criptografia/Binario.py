@@ -9,7 +9,6 @@ def binario_para_texto(binario):
     # Converte o binário de volta para o texto
     texto = ''.join(chr(int(byte, 2)) for byte in binario.split())
     return texto
-	
 
 menu = None
 
