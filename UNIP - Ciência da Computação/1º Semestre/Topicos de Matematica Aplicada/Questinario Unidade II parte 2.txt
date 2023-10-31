@@ -1,0 +1,18 @@
+1 - c. quadrada
+2x2 =>	( 1  2)
+	( 5 -6)
+
+2 - b. Aplica uma serie de operações que nao alteram a solução do sistema.
+
+3 - e. A matriz identidade é obtida pela multiplicação de uma matriz pela sua inversa.
+
+(
+erradas => 
+
+a. As matrizes de ordens diferentes podem ser somadas.
+
+d. Na multiplicaç~çao de matrizes A e B, a quantidade de colunas da matriz A deve ser diferente da quantidade de linhas da matriz B.
+
+)
+
+4 - e. Um sistema linear possivel e determinado admite infinitas soluções soluções.
