@@ -1,0 +1,21 @@
+*Criar Tabela:
+
+  create table pessoas
+  (
+  	idPessoa int primary key identity(1,1),
+  	nome varchar(50),
+  	rg varchar(10),
+  	cpf varchar(12)
+  )
+  go
+
+*Pesquisar Tabelas:
+
+  Select *from pessoas
+
+*Inserir valores de forma simples:
+
+  insert into pessoas
+values
+('Manoel','9988776655','12332112332')
+
