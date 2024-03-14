@@ -17,5 +17,11 @@
 
   insert into pessoas
 values
-('Manoel','9988776655','12332112332')
+('  Nome  ','  CPF  ','  RG  ')
 
+
+*Inserir valores de ordenadamente:
+
+  insert into pessoas(nome, rg, cpf)
+values
+('  Nome  ','  CPF  ','  RG  ')
