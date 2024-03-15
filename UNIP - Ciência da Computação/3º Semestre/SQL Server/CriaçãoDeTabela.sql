@@ -25,7 +25,6 @@
   ('  Nome  ','  CPF  ','  RG  ')
 
 
-
 --Inserir valores de ordenadamente:
 
   insert into pessoas(nome, rg, cpf)
@@ -35,8 +34,12 @@
   ('  Nome  ','  CPF  ','  RG  ')
 
 
---Deletando Valores da Tabela ??
+-- Deletando Valores da Tabela:
 
+drop table pessoas -- (╯°□°)╯︵ ┻━┻
+
+delete from pessoas	-- apaga especifico
+where idPessoa = 6
 
 
 --Ordenando Dados :
@@ -45,7 +48,7 @@
   order by nome asc --Crescente(Padrão)
   order by nome desc --Decrescente
 
-
+	  
 -- Pesquisa especifica(Primeiro da Lista ordenado pelo NOME e RG):
 
   Select top 1 * from pessoas
@@ -70,4 +73,4 @@
 
 -- Mostrar valores sem repetição:
 
-	select distinct(nome) from pessoas
+  select distinct(nome) from pessoas
