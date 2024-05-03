@@ -1,8 +1,7 @@
 package modelo;
 
-public class Validacao extends AbsPropiedades
+public class Validacao extends AbsPropriedades
 {
-
     public Validacao(String numero)
     {
         super(numero);
@@ -11,13 +10,14 @@ public class Validacao extends AbsPropiedades
     @Override
     public void Executar()
     {
-        Estatico.MENSAGEM = "";
+        Estaticos.MENSAGEM = "";
         try
         {
-            this.num = Integer.valueOf(this.numero);
-        } catch (Exception e)
+            this.num = Integer.parseInt(this.numero);
+        }
+        catch (Exception e)
         {
-            Estatico.MENSAGEM = "Digite um numero valido!";
+            Estaticos.MENSAGEM = "Digite números válidos";
         }
     }
     

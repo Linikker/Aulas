@@ -4,12 +4,13 @@
  */
 package apresentacao;
 
+import javax.swing.JOptionPane;
 import modelo.Controle;
-import modelo.Estatico;
+import modelo.Estaticos;
 
 /**
  *
- * @author Aluno
+ * @author Rever
  */
 public class frmPrincipal extends javax.swing.JDialog
 {
@@ -38,14 +39,7 @@ public class frmPrincipal extends javax.swing.JDialog
         lblResposta = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-
-        txfNumero.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                txfNumeroActionPerformed(evt);
-            }
-        });
+        setTitle("Fatorial");
 
         btnCalcular.setText("Calcular Fatorial");
         btnCalcular.addActionListener(new java.awt.event.ActionListener()
@@ -63,41 +57,37 @@ public class frmPrincipal extends javax.swing.JDialog
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
+                .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblResposta)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(txfNumero)
-                        .addComponent(btnCalcular, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)))
-                .addContainerGap(36, Short.MAX_VALUE))
+                        .addComponent(btnCalcular, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE)))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(38, 38, 38)
+                .addGap(50, 50, 50)
                 .addComponent(txfNumero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
                 .addComponent(btnCalcular)
-                .addGap(35, 35, 35)
+                .addGap(18, 18, 18)
                 .addComponent(lblResposta)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txfNumeroActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_txfNumeroActionPerformed
-    {//GEN-HEADEREND:event_txfNumeroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txfNumeroActionPerformed
 
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnCalcularActionPerformed
     {//GEN-HEADEREND:event_btnCalcularActionPerformed
-        
-        Controle controle = new Controle("");
-        if (Estatico.MENSAGEM.equals(""));
-            lblResposta.setText(text);
-        
+        Controle controle = new Controle(txfNumero.getText());
+        if (Estaticos.MENSAGEM.equals(""))
+            lblResposta.setText(controle.toString());
+        else
+            JOptionPane.showMessageDialog(null, Estaticos.MENSAGEM);
     }//GEN-LAST:event_btnCalcularActionPerformed
 
     /**
@@ -120,16 +110,20 @@ public class frmPrincipal extends javax.swing.JDialog
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex)
+        }
+        catch (ClassNotFoundException ex)
         {
             java.util.logging.Logger.getLogger(frmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex)
+        }
+        catch (InstantiationException ex)
         {
             java.util.logging.Logger.getLogger(frmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex)
+        }
+        catch (IllegalAccessException ex)
         {
             java.util.logging.Logger.getLogger(frmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex)
+        }
+        catch (javax.swing.UnsupportedLookAndFeelException ex)
         {
             java.util.logging.Logger.getLogger(frmPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
