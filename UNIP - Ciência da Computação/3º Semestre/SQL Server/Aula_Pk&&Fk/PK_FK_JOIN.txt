@@ -1,0 +1,61 @@
+create table Loja
+(
+	idLoja int identity(1, 1) primary key,
+	numLoja varchar(2),
+	endereco varchar(30),
+	numero varchar(5)
+)
+go
+
+create table Vendedor
+(
+	idVendedor int identity(1, 1) primary key,
+	nome varchar(30),
+	fk_idLoja int
+)
+go
+
+create table Veiculo
+(
+	idVeiculo int identity(1, 1) primary key,
+	tipo varchar(20),
+	fabricante varchar(30),
+	modelo varchar(30),
+	ano_fab int,
+	cor varchar(20),
+	valor_entr float,
+	valor_saida float,
+	data_entr date,
+	data_saida date,
+	fk_idLoja int,
+	fk_idVendedor int
+)
+go
+
+alter table Vendedor add constraint idVendedor_idLoja foreign key(fk_idLoja) references Loja(idLoja) 
+go
+
+alter table Veiculo add constraint idVeiculo_idLoja foreign key(fk_idLoja) references Loja(idLoja)
+go
+
+alter table Veiculo add constraint idVeiculo_idVendedores foreign key(fk_idVendedor) references Vendedor(idVendedor)
+go
+
+
+
+
+INSERT INTO Loja(numLoja, endereco, numero)
+select distinct loja, endereco, numero
+from produtos
+
+
+insert into Vendedor
+select distinct vendedor, idLoja 
+from produtos
+join Loja
+on produtos.loja = Loja.numLoja
+
+select distinct loja, vendedor
+from produtos
+select * from Vendedor
+select * from Loja
