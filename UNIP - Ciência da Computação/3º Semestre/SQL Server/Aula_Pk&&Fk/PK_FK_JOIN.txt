@@ -44,7 +44,7 @@ go
 
 
 
-INSERT INTO Loja(numLoja, endereco, numero)
+insert into Loja(numLoja, endereco, numero)
 select distinct loja, endereco, numero
 from produtos
 
@@ -59,3 +59,19 @@ select distinct loja, vendedor
 from produtos
 select * from Vendedor
 select * from Loja
+
+
+insert into veiculo
+select tipo,	fabricante,	modelo,	ano_fab,	cor,	valor_ent,	valor_saida,	data_ent,	data_saida,	idLoja,	idVendedor from 
+(
+	select * from produtos
+	join Vendedor
+	on produtos.vendedor = vendedor.nome
+)
+as a
+join
+(select numLoja, idLoja from loja
+)
+as b
+on a.loja = b.numLoja
+
