@@ -2,10 +2,11 @@ package Modelo;
 
 public class Pessoa
 {
-    private int id;
-    private String Nome;
-    private String RG;
-    private String CPF;
+    public int id;
+    public String Nome;
+    public String RG;
+    public String CPF;
+
 
     public int getId()
         {
@@ -46,9 +47,5 @@ public class Pessoa
         {
         this.CPF = CPF;
         }
-    
-    
-    
-    
     
 }

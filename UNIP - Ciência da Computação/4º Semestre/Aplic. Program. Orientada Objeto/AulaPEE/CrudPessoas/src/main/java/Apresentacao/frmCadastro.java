@@ -4,6 +4,10 @@
  */
 package Apresentacao;
 
+import Modelo.Estaticos;
+import Modelo.Pessoa;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author usuario
@@ -54,6 +58,14 @@ public class frmCadastro extends javax.swing.JDialog
         lblRG.setText("RG:");
 
         lblDataNascimento.setText("Data de nascimento:");
+
+        txfNome.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                txfNomeActionPerformed(evt);
+            }
+        });
 
         txfDataNascimento.setToolTipText("aaaa.mm.dd");
 
@@ -153,21 +165,34 @@ public class frmCadastro extends javax.swing.JDialog
     private void mniMainActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_mniMainActionPerformed
     {//GEN-HEADEREND:event_mniMainActionPerformed
         // codigo do menu main
-            this.dispose();
-            
-    }//GEN-LAST:event_mniMainActionPerformed
+        this.dispose();
 
+    }//GEN-LAST:event_mniMainActionPerformed
+    
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnCadastrarActionPerformed
     {//GEN-HEADEREND:event_btnCadastrarActionPerformed
         // TODO add your handling code here:
+        
+        JOptionPane.showMessageDialog(null, Estaticos.Mensagem);
+        System.out.println("Nome: "+txfNome.getText());
+        System.out.println("CPF: "+txfCPF.getText());
+        System.out.println("RG: "+txfRG.getText());
+        System.out.println("Data de Nascimento: "+txfDataNascimento.getText());
+        
+        
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_btnCancelarActionPerformed
     {//GEN-HEADEREND:event_btnCancelarActionPerformed
         // TODO add your handling code here:
-            this.dispose();
+        this.dispose();
 
     }//GEN-LAST:event_btnCancelarActionPerformed
+
+    private void txfNomeActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_txfNomeActionPerformed
+    {//GEN-HEADEREND:event_txfNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txfNomeActionPerformed
 
     /**
      * @param args the command line arguments
